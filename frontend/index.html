@@ -1,14 +1,344 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Let's Go Shopping</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+}
+
+header{
+background:black;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+border-bottom:2px solid gold;
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+color:gold;
+}
+
+nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-size:16px;
+}
+
+nav a:hover{
+color:gold;
+}
+
+.hero{
+height:85vh;
+background-image:url("https://images.unsplash.com/photo-1607082350899-7e105aa886ae");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.7);
+padding:40px;
+border-radius:10px;
+}
+
+.hero h1{
+font-size:50px;
+color:gold;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:gold;
+color:black;
+padding:15px 30px;
+border:none;
+font-size:18px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.btn:hover{
+background:#ffd700;
+}
+
+.section{
+padding:80px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:50px;
+color:gold;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+border-radius:10px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+margin:15px;
+}
+
+.card p{
+margin:0 15px 20px;
+color:#ccc;
+}
+
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.feature{
+width:250px;
+background:#111;
+padding:30px;
+border-radius:10px;
+}
+
+.feature h3{
+color:gold;
+margin-bottom:10px;
+}
+
+.delivery{
+background-image:url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+background-size:cover;
+background-position:center;
+padding:100px 10%;
+text-align:center;
+}
+
+.delivery-box{
+background:rgba(0,0,0,0.7);
+padding:50px;
+border-radius:10px;
+}
+
+footer{
+background:black;
+padding:40px;
+text-align:center;
+border-top:2px solid gold;
+margin-top:50px;
+}
+
+footer p{
+color:#aaa;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Let's Go Shopping 🛒</h1>
-<p>Compra cualquier producto y recíbelo hoy mismo.</p>
+<header>
+
+<div class="logo">Let's Go Shopping</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Productos</a>
+<a href="#">Ofertas</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Compra todo lo que quieras</h1>
+
+<p>Recibe tus productos el mismo día en tu ciudad</p>
+
+<button class="btn">Explorar productos</button>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Productos populares</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Smartphones</h3>
+<p>Los mejores teléfonos al mejor precio.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+<h3>Moda</h3>
+<p>Ropa moderna para todas las edades.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e">
+<h3>Tecnología</h3>
+<p>Los gadgets más nuevos del mercado.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606813902914-1b6d3c9e5b9a">
+<h3>Hogar</h3>
+<p>Todo lo que necesitas para tu casa.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>¿Por qué comprar con nosotros?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🚚 Entrega rápida</h3>
+<p>Recibe tu pedido el mismo día.</p>
+</div>
+
+<div class="feature">
+<h3>💳 Pagos seguros</h3>
+<p>Múltiples métodos de pago confiables.</p>
+</div>
+
+<div class="feature">
+<h3>⭐ Productos de calidad</h3>
+<p>Trabajamos con los mejores proveedores.</p>
+</div>
+
+<div class="feature">
+<h3>📦 Miles de productos</h3>
+<p>Encuentra todo lo que necesitas.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="delivery">
+
+<div class="delivery-box">
+
+<h2>Entrega en el mismo día</h2>
+
+<p>Conectamos clientes con repartidores locales para entregas rápidas dentro de tu municipio.</p>
+
+<br>
+
+<button class="btn">Comprar ahora</button>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Productos destacados</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<h3>Zapatillas deportivas</h3>
+<p>Comodidad y estilo para todos.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6">
+<h3>Laptops</h3>
+<p>Potencia y rendimiento profesional.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606813909354-6d4c3b64b0d6">
+<h3>Decoración</h3>
+<p>Dale estilo a tu hogar.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512499617640-c2f999098c01">
+<h3>Accesorios</h3>
+<p>Complementos para tu estilo.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h2 style="color:gold">Let's Go Shopping</h2>
+
+<p>La forma más rápida de comprar en tu ciudad.</p>
+
+<br>
+
+<p>© 2026 Let's Go Shopping - Todos los derechos reservados</p>
+
+</footer>
 
 </body>
 
